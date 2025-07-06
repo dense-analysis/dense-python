@@ -5,6 +5,12 @@ Analysis preferred manner. See Development steps below for initial setup, and
 after boostraping a new project edit project files as you see fit to start off
 your Python project.
 
+**NOTE:** This project template is released to the public domain free of charge,
+and you may freely remove and replace the `LICENSE` file and copyright notice
+when building your projects so you may use a license of our choice without
+crediting Dense Analysis. We simply wish to help you get started with Python
+projects quickly.
+
 ## Development
 
 Set up virtualenv initially for local development like so:
