@@ -1,0 +1,13 @@
+---
+services:
+  example_project:
+    build:
+      context: .
+      target: dev
+      dockerfile: Dockerfile
+    volumes:
+      # Mount project files for easy editing.
+      - ./pyproject.toml:/app/pyproject.toml
+      - ./uv.lock:/app/uv.lock
+      # Mount python sources so they can be hot-reloaded.
+      - ./src:/app/src

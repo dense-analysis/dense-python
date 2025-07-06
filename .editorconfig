@@ -1,0 +1,31 @@
+# Top-level EditorConfig file
+root = true
+
+# Unix-style newlines with UTF-8 encoding
+[*]
+end_of_line = lf
+charset = utf-8
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Match Python source files
+[*.py]
+indent_style = space
+indent_size = 4
+max_line_length = 79
+
+# Ensure TOML files follow same conventions
+[*.toml]
+indent_style = space
+indent_size = 4
+charset = utf-8
+
+# YAML files use 2 spaces
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
+
+# Shell scripts (if any)
+[*.sh]
+indent_style = space
+indent_size = 4

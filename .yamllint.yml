@@ -1,0 +1,5 @@
+---
+extends: default
+rules:
+  # Allow `foo: "on"` and other commonly used values.
+  truthy: disable
