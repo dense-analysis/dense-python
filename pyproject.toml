@@ -63,6 +63,12 @@ lint.select = [
     "C90",   # mccabe                     (no overly-complex code)
 ]
 
+[tool.ruff.lint.mccabe]
+# Flag errors (`C901`) whenever the complexity level exceeds 20
+# This is 20 possible branches through code in a single function.
+# See also: https://ntrs.nasa.gov/api/citations/20205011566/downloads/20205011566.pdf
+max-complexity = 20
+
 # ruff isort settings
 [tool.ruff.lint.isort]
 # Black-compatible isort settings for ruff
