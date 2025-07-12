@@ -42,8 +42,6 @@ typeCheckingMode = "strict"
 # Settings for ruff
 [tool.ruff]
 line-length = 79
-indent-width = 4
-preview = false
 target-version = "py313"
 
 # Include all default rules from the ruff "all" baseline, but we'll fine-tune.
