@@ -61,6 +61,12 @@ lint.select = [
     "C90",   # mccabe                     (no overly-complex code)
 ]
 
+lint.ignore = [
+    # batched-without-explicit-strict is insane! Shut up!
+    # You almost never want strict=True on itertools.batched.
+    "B911",
+]
+
 [tool.ruff.lint.mccabe]
 # Flag errors (`C901`) whenever the complexity level exceeds 20
 # This is 20 possible branches through code in a single function.
