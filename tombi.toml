@@ -1,0 +1,3 @@
+[lint.rules]
+key-empty = 'off'
+tables-out-of-order = 'off'
