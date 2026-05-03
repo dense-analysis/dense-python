@@ -18,10 +18,10 @@ def no_network(request: Any):
         yield
         return
 
-    _orig_socket = socket.socket
-    _orig_create_connection = socket.create_connection
+    orig_socket = socket.socket
+    orig_create_connection = socket.create_connection
 
-    class NoNetworkSocket(_orig_socket):
+    class NoNetworkSocket(orig_socket):
         def connect(self, *args: Any, **kwargs: Any) -> Never:
             raise RuntimeError(
                 'Network disabled: use @pytest.mark.allow_network',
@@ -38,5 +38,5 @@ def no_network(request: Any):
     try:
         yield
     finally:
-        socket.socket = _orig_socket
-        socket.create_connection = _orig_create_connection
+        socket.socket = orig_socket
+        socket.create_connection = orig_create_connection

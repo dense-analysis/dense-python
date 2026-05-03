@@ -21,6 +21,9 @@ python -m pip install uv
 uv sync
 ```
 
+This repo currently targets `Python 3.15.0a8`; `pyenv install` will pick that
+up from `.python-version`.
+
 If you are creating a new project, you can quickly set it up with the
 convenience script, which will delete itself after it's run.
 
@@ -58,3 +61,7 @@ You can test the docker image like so:
 docker build --no-cache -t example_project:latest .
 docker run -it --rm example_project:latest
 ```
+
+The production image uses `al3xos/python-distroless:3.14.4-debian13`, then
+copies in the `3.15.0a8` runtime from the slim builder image because no
+distroless alpha tag is published.
